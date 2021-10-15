@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Muli', sans-serif;
-  overflow: hidden;
   margin: 0;
+  overflow: hidden;
   background: #d7e8f5;
   height: 100vh;
   display: -webkit-box;
@@ -26,7 +26,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 20px;
+  margin: 0 20px;
+  position: relative;
 }
 
 .slide {
@@ -68,12 +69,39 @@ body {
 
 .slide.active h3 {
   opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in 0.4s;
-  transition: opacity 0.3s ease-in 0.4s;
+  -webkit-transition: opacity 0.15s ease-in 0.2s;
+  transition: opacity 0.15s ease-in 0.2s;
 }
 
-.slide.notactive:hover {
+.slide:hover {
   -webkit-transform: scale(110%);
           transform: scale(110%);
+}
+
+.slide.active:hover {
+  -webkit-transform: scale(100%);
+          transform: scale(100%);
+}
+
+.arrows {
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  padding: 20px;
+  top: 40%;
+  background: rgba(209, 231, 255, 0.1);
+}
+
+.arrows img {
+  max-height: 70px;
+  opacity: 1;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+.arrow-left {
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */
