@@ -88,20 +88,58 @@ body {
   cursor: pointer;
   z-index: 100;
   padding: 20px;
+  margin: 20px;
   top: 40%;
   background: rgba(209, 231, 255, 0.1);
-}
-
-.arrows img {
-  max-height: 70px;
+  min-height: 70px;
   opacity: 1;
-}
-
-.arrow-right {
-  right: 0;
 }
 
 .arrow-left {
   left: 0;
+  background: center/contain no-repeat url("https://pixs.ru/images/2021/10/16/arrow-right-white.png");
+}
+
+.arrow-right {
+  right: 0;
+  background: center/contain no-repeat url("https://pixs.ru/images/2021/10/16/arrow-left-white.png");
+}
+
+@media (max-width: 992px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .container {
+    width: auto;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 90vw;
+  }
+  .slide {
+    height: auto;
+    width: 80vw;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
 }
 /*# sourceMappingURL=style.css.map */

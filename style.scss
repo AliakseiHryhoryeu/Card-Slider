@@ -40,8 +40,8 @@ body {
         padding-bottom: 15px;
         font-weight: 600;
         font-size: 25px;
-        }
     }
+}
     .slide.active{
         flex:10;
         h3{
@@ -61,19 +61,44 @@ body {
         cursor: pointer;
         z-index: 100;
         padding: 20px;
+        margin: 20px;
         top: 40%;
         background: rgba(209, 231, 255, 0.1);
-        img{
-            max-height: 70px;
-            opacity: 1;
-        }
+        min-height: 70px;
+        opacity: 1;
+    }
+    .arrow-left{
+        left: 0;
+        background: center / contain no-repeat url('https://pixs.ru/images/2021/10/16/arrow-right-white.png');
+
     }
     .arrow-right{
         right: 0;
+        background: center / contain no-repeat url('https://pixs.ru/images/2021/10/16/arrow-left-white.png');
     }
-    .arrow-left{
-        left:0;
+    
+@media (max-width: 992px) {
+    body{
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
-
+    .container{
+        width: auto;
+        height: 100%;
+        flex-direction: column;
+        max-width: 90vw;
+    }
+    .slide{
+        height: auto;
+        width: 80vw;
+        flex: 1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 500ms ease-in-out;
+        display: flex;
+        align-items: end;
+    }
+}
 
   

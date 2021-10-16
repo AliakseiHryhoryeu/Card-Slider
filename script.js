@@ -46,16 +46,15 @@ function ChangeSlide(temp){
         })
     }
     if(counter+temp<0){
+        const neededSlide = document.getElementsByClassName('slide-'+ (slide.length-1))
+        clearActiveSlide()
+        neededSlide[0].classList.add('active')
+        counter=slide.length-1
+    }else if(Number(counter)+Number(temp)>Number(slide.length-1)){
         const neededSlide = document.getElementsByClassName('slide-'+ 0)
         clearActiveSlide()
         neededSlide[0].classList.add('active')
         counter=0
-    }else if(Number(counter)+Number(temp)>Number(slide.length-1)){
-        const neededSlide = document.getElementsByClassName('slide-'+ slide.length)
-        console.log("counter+temp= " + counter+temp + " slide.length= "+slide.length )
-        clearActiveSlide()
-        neededSlide[0].classList.add('active')
-        counter=slide.length-2
     }else{
         const neededSlide = document.getElementsByClassName('slide-'+ (counter+temp))
         clearActiveSlide()
