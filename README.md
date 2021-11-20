@@ -3,3 +3,5 @@
  + Clean JavaScript
  + SCSS
  + HTML/CSS
+
+![Card Slider](/preview.png)
